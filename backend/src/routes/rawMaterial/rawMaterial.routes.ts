@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { RawMaterial } from "../../models/RawMaterial";
+import { RawMaterial } from "../../models/RawMaterial.js";
 
 const router = Router();
 

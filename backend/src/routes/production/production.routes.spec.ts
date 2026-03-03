@@ -1,12 +1,12 @@
 import request from "supertest";
 import express from "express";
-import productionRoutes from "./production.routes";
-import { sequelize } from "../../database";
-import { Product } from "../../models/Product";
-import { RawMaterial } from "../../models/RawMaterial";
-import { ProductRawMaterial } from "../../models/ProductRawMaterial";
+import productionRoutes from "./production.routes.js";
+import { sequelize } from "../../database.js";
+import { Product } from "../../models/Product.js";
+import { RawMaterial } from "../../models/RawMaterial.js";
+import { ProductRawMaterial } from "../../models/ProductRawMaterial.js";
 
-import "../../models";
+import "../../models/index.js";
 
 const app = express();
 app.use(express.json());

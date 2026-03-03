@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { Product } from "../../models/Product";
-import { RawMaterial } from "../../models/RawMaterial";
-import { sequelize } from "../../database";
-import { ProductRawMaterial } from "../../models";
+import { Product } from "../../models/Product.js";
+import { RawMaterial } from "../../models/RawMaterial.js";
+import { sequelize } from "../../database.js";
+import { ProductRawMaterial } from "../../models/index.js";
 
 const router = Router();
 

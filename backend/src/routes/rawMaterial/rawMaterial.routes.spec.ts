@@ -1,10 +1,10 @@
 import request from "supertest";
 import express from "express";
 
-import rawMaterialRoutes from "./rawMaterial.routes";
-import { sequelize } from "../../database";
-import { RawMaterial } from "../../models/RawMaterial";
-import "../../models";
+import rawMaterialRoutes from "./rawMaterial.routes.js";
+import { sequelize } from "../../database.js";
+import { RawMaterial } from "../../models/RawMaterial.js";
+import "../../models/index.js";
 
 const app = express();
 app.use(express.json());

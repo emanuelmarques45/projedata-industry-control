@@ -1,6 +1,6 @@
-import { Product } from "./Product";
-import { RawMaterial } from "./RawMaterial";
-import { ProductRawMaterial } from "./ProductRawMaterial";
+import { Product } from "./Product.js";
+import { RawMaterial } from "./RawMaterial.js";
+import { ProductRawMaterial } from "./ProductRawMaterial.js";
 
 // Product <-> RawMaterial (N:N)
 Product.belongsToMany(RawMaterial, {

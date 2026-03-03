@@ -1,13 +1,11 @@
 import express from "express";
 import cors from "cors";
 
-import { sequelize } from "./database";
+import "./models/index.js";
 
-import "./models";
-
-import productRoutes from "./routes/product/product.routes";
-import rawMaterialRoutes from "./routes/rawMaterial/rawMaterial.routes";
-import productionRoutes from "./routes/production/production.routes";
+import productRoutes from "./routes/product/product.routes.js";
+import rawMaterialRoutes from "./routes/rawMaterial/rawMaterial.routes.js";
+import productionRoutes from "./routes/production/production.routes.js";
 
 const app = express();
 
@@ -22,12 +20,4 @@ app.get("/health", (_req, res) => {
   return res.json({ status: "API is running" });
 });
 
-const PORT = process.env.PORT || 3000;
-
-sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-  });
-});
-
-module.exports = { app };
+export { app };

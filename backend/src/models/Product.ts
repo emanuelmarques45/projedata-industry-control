@@ -3,11 +3,10 @@ import {
   Model,
   type BelongsToManyAddAssociationMixin,
   type BelongsToManySetAssociationsMixin,
-  type HasManyGetAssociationsMixin,
   type HasManyHasAssociationMixin,
 } from "sequelize";
-import { sequelize } from "../database";
-import { RawMaterial } from "./RawMaterial";
+import { sequelize } from "../database.js";
+import { RawMaterial } from "./RawMaterial.js";
 
 export class Product extends Model {
   declare id: number;

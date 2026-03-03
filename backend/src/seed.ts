@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { sequelize } from "./database";
+import { sequelize } from "./database.js";
 
 async function runSeed() {
   try {

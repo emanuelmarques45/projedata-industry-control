@@ -1,10 +1,10 @@
 import request from "supertest";
 import express from "express";
 
-import productRoutes from "./product.routes";
-import { sequelize } from "../../database";
-import { Product } from "../../models/Product";
-import "../../models";
+import productRoutes from "./product.routes.js";
+import { sequelize } from "../../database.js";
+import { Product } from "../../models/Product.js";
+import "../../models/index.js";
 
 const app = express();
 app.use(express.json());

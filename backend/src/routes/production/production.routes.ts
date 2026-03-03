@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { Product } from "../../models/Product";
-import { RawMaterial } from "../../models/RawMaterial";
+import { Product } from "../../models/Product.js";
+import { RawMaterial } from "../../models/RawMaterial.js";
 
 const router = Router();
 

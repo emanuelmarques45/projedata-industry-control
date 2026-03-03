@@ -1,10 +1,12 @@
 [build]
   functions = "netlify/functions"
   publish = "dist"
-[functions]
-  external_node_modules = ["express"]
+
 [[redirects]]
-  force = true
+  from = "/api/*"
+  to = "/.netlify/functions/index"
   status = 200
-  from = "/*"
-  to = "./netlify/functions/index"
+
+[functions]
+  external_node_modules = ["express", "sequelize", "cors", "pg-hstore", "pg"]
+  node_bundler = "esbuild"

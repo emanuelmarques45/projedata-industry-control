@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../database";
-import { ProductRawMaterial } from "./ProductRawMaterial";
+import { sequelize } from "../database.js";
+import { ProductRawMaterial } from "./ProductRawMaterial.js";
 
 export class RawMaterial extends Model {
   declare id: number;
